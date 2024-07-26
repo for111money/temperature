@@ -1,1 +1,14 @@
+DS18B20通信方式是单总线（1-wire），所以树莓派需要打开1-wire通讯方式，详见http://t.csdnimg.cn/FwhFx
 
+接线：
+1.首先注意一个上拉电阻的概念：http://t.csdnimg.cn/KFnuf，可以理解为增加系统的稳定性。
+树莓派自带上拉电阻功能：GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+也可以外接上拉电阻：http://www.dfrobot.com/wiki/index.php/Terminal_sensor_adapter_V2_SKU:DFR0055
+
+2.与树莓派接线：DS18B20的GND与VCC分别接树莓派的3.3v与GND，data信号线可随便接一个GPIO口
+
+
+代码方面：直接调用w1thermsensor库；
+      from w1thermsensor import W1ThermSensor
+      sensor = W1ThermSensor()
+      temperature = sensor.get_temperature()
