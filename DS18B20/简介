@@ -1,4 +1,4 @@
-DS18B20通信方式是单总线（1-wire），所以树莓派需要打开1-wire通讯方式，详见http://t.csdnimg.cn/FwhFx
+DS18B20通信方式是单总线（1-wire），所以树莓派需要打开1-wire通讯方式，详见http://t.csdnimg.cn/FwhFx，也可参考http://t.csdnimg.cn/YtIMp
 
 接线：
 1.首先注意一个上拉电阻的概念：http://t.csdnimg.cn/KFnuf，可以理解为增加系统的稳定性。
